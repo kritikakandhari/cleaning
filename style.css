@@ -354,9 +354,13 @@ footer a:hover { color: var(--tb-lime-green); padding-left: 5px; }
   .navbar-glass { padding: 5px 0 !important; }
   .navbar-toggler { padding: 4px 6px !important; font-size: 0.8rem; }
 
-  /* Footer Scaling */
-  footer { padding-top: 40px !important; text-align: center; }
-  footer .d-flex { justify-content: center; }
+  /* Footer Scaling & Centering */
+  footer { padding-top: 40px !important; text-align: center !important; }
+  footer .d-flex { justify-content: center !important; }
+  footer .list-unstyled li { text-align: center !important; }
+  footer .list-unstyled li.d-flex { justify-content: center !important; }
+  footer .list-unstyled li div { text-align: center !important; }
+  
   .footer-social-link { width: 34px !important; height: 34px !important; font-size: 0.9rem !important; }
   .footer-wave svg { height: 30px !important; }
 
