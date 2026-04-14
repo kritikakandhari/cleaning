@@ -349,6 +349,10 @@ footer a:hover { color: var(--tb-lime-green); padding-left: 5px; }
   .feature-card, .service-card, .sidebar-card, .package-card { padding: 1.25rem !important; }
   .service-icon, .process-icon-wrapper, .step-circle { width: 50px !important; height: 50px !important; font-size: 1.25rem !important; }
   
+  /* Center Specific Cards and Ticks */
+  .package-card ul { display: inline-block !important; text-align: left !important; }
+  .p-4.bg-ocean, .border-start.border-grass { text-align: center !important; }
+  
   /* Navbar Adjustments */
   .navbar-brand img { height: 45px !important; }
   .navbar-glass { padding: 5px 0 !important; }
@@ -358,7 +362,7 @@ footer a:hover { color: var(--tb-lime-green); padding-left: 5px; }
   footer { padding-top: 40px !important; text-align: center !important; }
   footer .d-flex { justify-content: center !important; }
   footer .list-unstyled li { text-align: center !important; }
-  footer .list-unstyled li.d-flex { justify-content: center !important; }
+  footer .list-unstyled li.d-flex { flex-direction: column !important; align-items: center !important; gap: 8px !important; }
   footer .list-unstyled li div { text-align: center !important; }
   
   .footer-social-link { width: 34px !important; height: 34px !important; font-size: 0.9rem !important; }
@@ -369,6 +373,13 @@ footer a:hover { color: var(--tb-lime-green); padding-left: 5px; }
 
   /* Mobile Pulse Animation */
   .btn-grass { animation: mobilePulse 2.5s infinite; }
+
+  /* Disable Scroll Animations on Mobile to prevent "white flash" */
+  .animate-on-scroll { 
+    opacity: 1 !important; 
+    transform: none !important; 
+    transition: none !important; 
+  }
 }
 
 @keyframes mobilePulse {
