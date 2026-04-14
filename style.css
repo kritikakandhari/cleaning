@@ -394,7 +394,20 @@ footer a:hover { color: var(--tb-lime-green); padding-left: 5px; }
 
 @media (max-width: 768px) {
     #game-stats {
-        display: none !important;
+        display: flex !important;
+        flex-direction: row;
+        width: auto !important;
+        left: auto !important;
+        right: 15px !important;
+        top: 15px !important;
+        bottom: auto !important;
+        padding: 6px 12px;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        backdrop-filter: blur(8px);
+        transform: scale(0.85);
+        transform-origin: top right;
     }
 }
 
@@ -406,10 +419,12 @@ footer a:hover { color: var(--tb-lime-green); padding-left: 5px; }
 
 @media (max-width: 768px) {
     .stat-box {
-        padding: 4px 10px;
-        flex: 1;
-        margin: 0 4px;
+        padding: 2px 8px;
+        background: transparent;
+        margin: 0;
     }
+    .stat-label { display: none !important; } /* Hide 'Time Left' label on mobile pill */
+    .stat-value { font-size: 0.9rem; margin-right: 5px; }
 }
 
 .stat-label { font-size: 0.7rem; text-transform: uppercase; color: var(--tb-ocean-blue); font-weight: 800; display: block; }
@@ -439,9 +454,9 @@ footer a:hover { color: var(--tb-lime-green); padding-left: 5px; }
 @media (max-width: 768px) {
     .btn-game {
         width: auto;
-        padding: 6px 15px;
+        padding: 4px 12px;
         font-size: 0.7rem;
-        flex: 1.5;
+        border-radius: 50px;
     }
 }
 
@@ -918,6 +933,23 @@ footer a:hover { color: var(--tb-lime-green); padding-left: 5px; }
     background: var(--tb-ocean-blue);
     color: #ffffff;
     transform: scale(1.1);
+}
+
+/* Mobile Sticky-Stack Effect */
+@media (max-width: 768px) {
+    .process-step {
+        position: sticky;
+        top: 100px;
+        background: #ffffff;
+        border-radius: 20px;
+        padding: 1.5rem !important;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        border: 1px solid rgba(13, 92, 158, 0.05);
+    }
+    
+    /* Ensure section padding doesn't fight the sticky offset */
+    .section-relative, section.py-5 { padding-top: 1rem !important; }
 }
 
 .founder-card {
